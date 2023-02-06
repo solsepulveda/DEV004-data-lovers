@@ -7,9 +7,9 @@ const title = funciones.movieList(movies); */
 const movies = data.films;
 const root = document.getElementById("root");
 
-const titulo = funciones.title(movies);
+const titulo = funciones.title(movies); // no toma la función (void)
 const movieDiv = document.createElement("div");
-movieDiv.innerHTML = titulo; 
+movieDiv.innerHTML = titulo; // (void)
 root.appendChild(movieDiv);
 
 

@@ -4,11 +4,11 @@ const funciones = {
   img : img
 };
 
-function title (anything) {
-  const titulo = [];
+function title (anything) { // anything es para que al llamar la función ocupeds cualquier parametro
+  const titulo = []; // crear arreglo vacio
   for (const movie of anything) {        
     const movieTitle = movie.title;   
-    titulo.push(movieTitle);
+    titulo.push(movieTitle); // se agraga el titulo después de erl último elemento del arreglo
   }  
 }
 
