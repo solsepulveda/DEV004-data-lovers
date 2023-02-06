@@ -5,17 +5,19 @@ const funciones = {
 };
 
 function title (anything) {
-  for (const movie of anything) {
-    const movieTitle = movie.title;    
-    return movieTitle
+  const titulo = [];
+  for (const movie of anything) {        
+    const movieTitle = movie.title;   
+    titulo.push(movieTitle);
   }  
 }
 
 
 function img (anything) {
+  const poster = [];
   for (const imagen of anything) {
     const movieImg = imagen.poster;    
-    return movieImg    
+    poster.push(movieImg);
   }
 }
 
