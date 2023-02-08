@@ -1,14 +1,14 @@
 // estas funciones son de ejemplo
-const funciones = {
+/* const funciones = {
   title : title,
   img : img
 };
 
-function title (anything) { // anything es para que al llamar la función ocupeds cualquier parametro
+function title (anything) { // anything es para que al llamar la función ocupes cualquier parametro
   const titulo = []; // crear arreglo vacio
   for (const movie of anything) {        
     const movieTitle = movie.title;   
-    titulo.push(movieTitle); // se agraga el titulo después de erl último elemento del arreglo
+    titulo.push(movieTitle); // se agraga el titulo después de el último elemento del arreglo
   }  
 }
 
@@ -20,7 +20,7 @@ function img (anything) {
     poster.push(movieImg);
   }
 }
-
+ */
 
 
 
@@ -44,4 +44,4 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-export default funciones;
+// export default funciones;

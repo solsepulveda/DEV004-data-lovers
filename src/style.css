@@ -1,0 +1,61 @@
+
+html {
+    font-family: sans-serif;
+    color: white;
+    }
+  
+  body{
+      position: relative;
+      margin:0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: url(fondorosa.jpg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+  }
+  
+  header{
+    background-image: url(kiki.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50em;
+    position: static;
+    text-align: center;
+    margin:-5%;
+    margin-top: -20%;
+  }
+  
+  main{
+    display: flex;
+    justify-content: center;
+  }
+  h1{
+    text-align: center;
+    font-size: 40px;
+    justify-content: center;
+  }
+  
+  #root{
+      position:static;
+      align-items: center;    
+      min-height: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 950px;
+      margin-top: 5%;
+  }
+  
+  .card{
+      align-items: center;
+      text-align: center;
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin: 1em;
+  }
+  
+  
+  

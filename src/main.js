@@ -1,22 +1,19 @@
-import funciones from './data.js';
-import data from './data/ghibli/ghibli.js';
-
-/* const movies = data.films;
-const title = funciones.movieList(movies); */
+import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
 const root = document.getElementById("root");
 
-const titulo = funciones.title(movies); // no toma la función (void)
-const movieDiv = document.createElement("div");
-movieDiv.innerHTML = titulo; // (void)
-root.appendChild(movieDiv);
+const deploy = (movies) => {
+  for (const movie of movies) {
+    /* const movieTitle = movie.title; */
+    const movieDiv = document.createElement("div");
+    movieDiv.classList.add("card"); //clase para editar en css*/
+    //con movie.title llamamos a la constante y le asignamos una etiqueta//
+    movieDiv.innerHTML += `<h2>${movie.title}</h2>
+    <img src="${movie.poster}" alt="imágen de la película">`//siempre poner en imágenes alt
+    root.appendChild(movieDiv);
+  }
+};
+deploy(movies);
 
-
-const imagen = funciones.img(movies);
-const otroDiv = document.createElement("img");    
-otroDiv.src = imagen;
-root.appendChild(otroDiv);
-
-
-// console.log(title);
+// console.log(data);
