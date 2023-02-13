@@ -1,3 +1,4 @@
+import { alphabeticOrderAsc } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -17,3 +18,13 @@ const titleImage = (movies) => {
 titleImage(movies);
 
 // console.log(data);
+
+
+
+const orderBy = (movies) => {
+  const movieName = movies.title;  
+  console.log(movieName);
+  alphabeticOrderAsc(movieName);
+  document.addEventListener("click", orderBy)
+}
+console.log(orderBy);

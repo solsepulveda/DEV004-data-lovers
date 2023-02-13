@@ -12,19 +12,13 @@ function title (anything) { // anything es para que al llamar la función ocupes
   }  
 }
 
-
 function img (anything) {
   const poster = [];
   for (const imagen of anything) {
     const movieImg = imagen.poster;    
     poster.push(movieImg);
   }
-}
- */
-
-
-
-
+}*/
 
 /* function movieList(anything){  
   const movies = Object.entries(anything);
@@ -34,14 +28,17 @@ function img (anything) {
 
 //function movieNames(anything)
 
-
-
-export const example = () => {
-  return 'example';
+export const alphabeticOrderAsc = function (anyArray) {
+  const orderAZ = anyArray.sort();
+  return orderAZ;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const alphabeticOrderDes = function (a, b) {
+  if (a > b)
+    return -1;
+  if (a < b)
+    return 1;
+  return 0;
 };
 
 // export default funciones;
