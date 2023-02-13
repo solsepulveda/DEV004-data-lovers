@@ -20,22 +20,20 @@ html {
     background-image: url(kiki.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50em;
-    position: static;
+    background-position: center center;    
+  }
+
+  h1{
     text-align: center;
-    margin:-5%;
-    margin-top: -20%;
+    font-size: 40px;
+    padding: 1em;
   }
   
   main{
     display: flex;
     justify-content: center;
   }
-  h1{
-    text-align: center;
-    font-size: 40px;
-    justify-content: center;
-  }
+ 
   
   #root{
       position:static;
@@ -45,16 +43,17 @@ html {
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 950px;
-      margin-top: 5%;
+      width: 1500px;      
   }
   
   .card{
       align-items: center;
       text-align: center;
+      text-shadow: black 0.1em 0.1em 0.2em;
       flex-wrap: nowrap;
       justify-content: center;
       margin: 1em;
+      width:min-content;
   }
   
   

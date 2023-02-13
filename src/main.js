@@ -3,7 +3,7 @@ import data from "./data/ghibli/ghibli.js";
 const movies = data.films;
 const root = document.getElementById("root");
 
-const deploy = (movies) => {
+const titleImage = (movies) => {
   for (const movie of movies) {
     /* const movieTitle = movie.title; */
     const movieDiv = document.createElement("div");
@@ -14,6 +14,6 @@ const deploy = (movies) => {
     root.appendChild(movieDiv);
   }
 };
-deploy(movies);
+titleImage(movies);
 
 // console.log(data);
