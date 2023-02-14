@@ -3,7 +3,8 @@ import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
 const root = document.getElementById("root");
-console.log(movies);
+//console.log(movies);
+
 
 const titleImage = (movies) => {
   for (const movie of movies) {
@@ -19,15 +20,19 @@ const titleImage = (movies) => {
 titleImage(movies);
 
 // console.log(data);
-
-
-
-const orderBy = (movies) => {
-  const movieName = movies;  
-  console.log(movieName);
-  const orderAZ = alphabeticOrderAsc(movieName);
+const orderByAZ = (movies) => { 
+  const orderAZ = alphabeticOrderAsc(movies);
   console.log(orderAZ);
-  const boton = document.getElementById("order")
-  boton.addEventListener("change", () => {titleImage(orderAZ)})
+  const buttonSelection = document.getElementById("order")
+  buttonSelection.addEventListener("change", () => {titleImage(orderAZ)})
 }
-orderBy(movies);
+orderByAZ(movies);
+
+
+/* const orderByZA = (movies) => { 
+  const orderZA = alphabeticOrderDes(movies);
+  console.log(orderZA);
+  const buttonZA = document.getElementById("order")
+  buttonZA.addEventListener("change", () => {titleImage(orderZA)})
+}
+orderByZA(movies); */
