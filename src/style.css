@@ -33,7 +33,13 @@ html {
     display: flex;
     justify-content: center;
   }
- 
+  
+  .order{
+   position: absolute;
+   margin: 2em;
+   display: flex;
+   flex-direction: row;
+  }
   
   #root{
       position:static;
@@ -43,7 +49,8 @@ html {
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 1500px;      
+      width: 1500px;
+      margin-top: 3em;     
   }
   
   .card{
@@ -53,7 +60,7 @@ html {
       flex-wrap: nowrap;
       justify-content: center;
       margin: 1em;
-      width:min-content;
+      width: min-content;
   }
   
   

@@ -1,4 +1,4 @@
-import { alphabeticOrderAsc } from "./data.js";
+import { alphabeticOrderAsc, alphabeticOrderDes } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -19,15 +19,28 @@ const titleImage = (movies) => {
 };
 titleImage(movies);
 
-// console.log(data);
-const orderByAZ = (movies) => { 
-  const orderAZ = alphabeticOrderAsc(movies);
-  console.log(orderAZ);
-  const buttonSelection = document.getElementById("order")
-  buttonSelection.addEventListener("change", () => {titleImage(orderAZ)})
-}
-orderByAZ(movies);
 
+const orderBy = (movies) => { 
+  //const orderAZ = alphabeticOrderAsc(movies);
+  //console.log(orderAZ);
+  const buttonSelection = document.getElementById("order")
+  buttonSelection.addEventListener("change", () => {
+    const selectedOption = document.querySelector("#order option:checked").value;    
+    if (selectedOption === "a-z"){
+      root.innerHTML = "";
+      const orderAZ = alphabeticOrderAsc(movies);    
+      titleImage(orderAZ);
+    }
+    if (selectedOption === "z-a"){
+      root.innerHTML = "";
+      const orderZA = alphabeticOrderDes(movies);
+      titleImage(orderZA);
+    }
+  });
+  
+}
+orderBy(movies);
+  
 
 /* const orderByZA = (movies) => { 
   const orderZA = alphabeticOrderDes(movies);

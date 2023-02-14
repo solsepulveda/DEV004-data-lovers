@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" href="favicon.ico"/>
   <title>Data Lovers</title>
-  <script src="https://kit.fontawesome.com/f84775eb32.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/f84775eb32.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -17,10 +18,12 @@
   </header>
 
   <main>
-    <div>
+    <div class="order">
+      <div>Orden: </div>
       <select name="order" id="order">
-        <option id="az" value="a-z">A-Z</option>
-        <option id="za" value="z-a">Z-A</option>
+        <option value="0" disabled selected>...Selecciona uno</option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
       </select>
     </div>
     
