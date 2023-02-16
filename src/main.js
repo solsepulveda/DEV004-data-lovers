@@ -19,23 +19,23 @@ const titleImage = (movies) => {
 };
 titleImage(movies);
 
-
-const orderBy = (movies) => { 
+const copyMovies = data.films;
+const orderBy = (copyMovies) => { 
   const buttonSelection = document.getElementById("order")
   buttonSelection.addEventListener("change", () => {
     const selectedOption = document.querySelector("#order option:checked").value;    
     if (selectedOption === "a-z"){
       root.innerHTML = "";
-      const orderAZ = alphabeticOrderAsc(movies);    
+      const orderAZ = alphabeticOrderAsc(copyMovies);    
       titleImage(orderAZ);
     }
     if (selectedOption === "z-a"){
       root.innerHTML = "";
-      const orderZA = alphabeticOrderDes(movies);
+      const orderZA = alphabeticOrderDes(copyMovies);
       titleImage(orderZA);
     }
   });
   
 }
-orderBy(movies);
+orderBy(copyMovies);
   
