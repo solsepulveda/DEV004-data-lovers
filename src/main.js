@@ -21,7 +21,7 @@ const titleImage = (movies) => {
 titleImage(movies);
 
 const copyMovies = data.films;
-const orderBy = (copyMovies) => { 
+const orderBy = (copyMovies) => {
   const buttonSelection = document.getElementById("order")
   buttonSelection.addEventListener("change", () => {
     const selectedOption = document.querySelector("#order option:checked").value;    

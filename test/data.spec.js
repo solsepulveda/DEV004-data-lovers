@@ -1,23 +1,31 @@
-import { example, anotherExample } from '../src/data.js';
+import { alphabeticOrderAsc, alphabeticOrderDes} from '../src/data.js';
 
 
-describe('example', () => {
+describe('alphabeticOrderAsc' , () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof alphabeticOrderAsc).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+  const  peliculas = [{"id": 1, "title":'uno', "generos": ['accion','terror']},
+    {"id": 2, "title":'dos', "generos": ['terror']},
+    {"id":3, "title":'tres', "generos": ['accion', 'comedia']}];
+
+  it('alphabeticOrderAsc', () => {
+    expect(alphabeticOrderAsc(peliculas)).toStrictEqual([{"id": 2, "title":'dos', "generos": ['terror']}, {"id":3, "title":'tres', "generos": ['accion', 'comedia']}, {"id": 1, "title":'uno', "generos": ['accion','terror']}]);
+  });  
 });
 
 
-describe('anotherExample', () => {
+describe('alphabeticOrderDes', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof alphabeticOrderDes).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  const  peliculas = [{"id": 1, "title":'uno', "generos": ['accion','terror']},
+    {"id": 2, "title":'dos', "generos": ['terror']},
+    {"id":3, "title":'tres', "generos": ['accion', 'comedia']}]
+
+  it('alphabeticOrderDes', () => {
+    expect(alphabeticOrderDes(peliculas)).toStrictEqual([{"id": 1, "title":'uno', "generos": ['accion','terror']}, {"id":3, "title":'tres', "generos": ['accion', 'comedia']}, {"id": 2, "title":'dos', "generos": ['terror']}]);
   });
 });
