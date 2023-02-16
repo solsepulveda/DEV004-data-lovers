@@ -1,3 +1,4 @@
+
 import { alphabeticOrderAsc, alphabeticOrderDes } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
@@ -39,3 +40,4 @@ const orderBy = (copyMovies) => {
 }
 orderBy(copyMovies);
   
+
