@@ -1,23 +1,15 @@
-import { example, anotherExample } from '../src/data.js';
+import { alphabeticOrderAsc } from '../src/data.js';
 
-
-describe('example', () => {
+describe('alphabeticOrderAsc', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof alphabeticOrderAsc).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+  const data = [{"title": "Castle in the Sky"},{"title": "Kiki's Delivery Service"},{"title": "Grave of the Fireflies"}];
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('sorts data in ascending alphabetic order', () => {
+    const expected = [{"title": "Castle in the Sky"},{"title": "Grave of the Fireflies"},{"title": "Kiki's Delivery Service"}];
+    const result = alphabeticOrderAsc(data);
+    expect(result).toEqual(expected);
   });
 });
