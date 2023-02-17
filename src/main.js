@@ -35,8 +35,7 @@ const orderBy = (copyMovies) => {
       const orderZA = alphabeticOrderDes(copyMovies);
       titleImage(orderZA);
     }
-  });
-  
+  });  
 }
 orderBy(copyMovies);
   

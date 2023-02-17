@@ -71,7 +71,21 @@ html {
       padding-right: 10px;
       flex-wrap: nowrap;
       flex-wrap: wrap;
+    }
 
+    #filter{
+      background-color: #ffffff;
+      color: #5bcfcc;
+      border-radius:25px;
+      text-align: center;
+      margin-left: 20px;
+      height: 35px;
+      width: 200px;
+      border: 0px;
+      font-size: 15px;
+      padding-right: 10px;
+      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
 
     .barra{
