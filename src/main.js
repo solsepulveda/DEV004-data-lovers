@@ -1,5 +1,5 @@
 
-import { alphabeticOrderAsc, alphabeticOrderDes } from "./data.js";
+import { alphabeticOrderAsc, alphabeticOrderDes, filteredDirector, mappedDirector } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -35,9 +35,62 @@ const orderBy = (copyMovies) => {
       const orderZA = alphabeticOrderDes(copyMovies);
       titleImage(orderZA);
     }
-  });
-  
-}
+  });  
+};
 orderBy(copyMovies);
-  
 
+const director = mappedDirector(movies);
+const nameDirector = filteredDirector(director);
+const directorOption = document.getElementById("directors");
+const directorList = nameDirector;
+for (let i = 0; i < directorList.length; i++){
+  const list = document.createElement('option');
+  list.innerHTML = directorList[i];
+  directorOption.appendChild(list);
+}
+
+document.getElementById("directors").addEventListener("change", function(){
+  const selectedOption = document.querySelector("#directors option:checked").value;
+  let directorFilter;
+  if (selectedOption === "Hayao Miyazaki") {
+    directorFilter = movies.filter(function(movie) {
+      root.innerHTML = "";
+      return movie.director === "Hayao Miyazaki";
+    });
+  }
+  else if (selectedOption === "Isao Takahata") {
+    directorFilter = movies.filter(function(movie) {
+      root.innerHTML = "";
+      return movie.director === "Isao Takahata";
+    });
+  }
+  else if (selectedOption === "Yoshifumi Kondō") {
+    directorFilter = movies.filter(function(movie) {
+      root.innerHTML = "";
+      return movie.director === "Yoshifumi Kondō";
+    });
+  }
+  else if (selectedOption === "Hiroyuki Morita") {
+    directorFilter = movies.filter(function(movie) {
+      root.innerHTML = "";
+      return movie.director === "Hiroyuki Morita";
+    });
+  }
+  else if (selectedOption === "Gorō Miyazaki") {
+    directorFilter = movies.filter(function(movie) {
+      root.innerHTML = "";
+      return movie.director === "Gorō Miyazaki";
+    });
+  }
+  else if (selectedOption === "Hiromasa Yonebayashi") {
+    directorFilter = movies.filter(function(movie) {
+      root.innerHTML = "";
+      return movie.director === "Hiromasa Yonebayashi";
+    });
+  }
+  else {
+    root.innerHTML = "";
+    directorFilter = movies;
+  }
+  titleImage(directorFilter);
+});
