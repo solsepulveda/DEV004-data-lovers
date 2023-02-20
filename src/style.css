@@ -74,7 +74,7 @@ html {
 
     }
 
-    #filter{
+    #directors{
       background-color: #ffffff;
       color: #5bcfcc;
       border-radius:25px;
@@ -137,6 +137,11 @@ html {
         box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
         flex-wrap: nowrap;
         justify-content: center;
+        transition: all 0.8 ease;
+      }
+      .card img:hover{
+        filter:grayscale(1) brightness(1);
+        transition:all 0.6% ease;
       }
 
       h2{
