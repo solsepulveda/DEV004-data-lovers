@@ -9,11 +9,13 @@ export const alphabeticOrderDes = function (anyArray) {
   return orderZA;
 };
 
+// extrae nombre de directores
 export const mappedDirector = function(anyArray) {
   const director = anyArray.map(anyArray => anyArray.director)
   return director
 }
 
+//elimina nombre resptidos en directore
 export const filteredDirector = function(anyArray) {
   const onlyDirectorName = anyArray.filter((director, index) => {
     return anyArray.indexOf(director) === index
