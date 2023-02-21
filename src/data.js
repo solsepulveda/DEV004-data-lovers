@@ -15,10 +15,26 @@ export const mappedDirector = function(anyArray) {
   return director
 }
 
-//elimina nombre resptidos en directore
+//elimina nombres resptidos en directores
 export const filteredDirector = function(anyArray) {
   const onlyDirectorName = anyArray.filter((director, index) => {
     return anyArray.indexOf(director) === index
   })
   return onlyDirectorName
+}
+
+export const people = function(anyArray) {
+  const charactersMovies = anyArray.map(anyArray => anyArray.people) 
+  return charactersMovies
+}
+
+export const peopleGender = function(anyArray) {
+  const characterGender = anyArray.filter(character => {
+    const gender = character.gender
+    const female = [];
+    if(gender === 'Female'){
+      female.push(gender);
+      return female.length
+    }});
+  return characterGender
 }

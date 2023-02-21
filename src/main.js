@@ -1,5 +1,5 @@
 
-import { alphabeticOrderAsc, alphabeticOrderDes, filteredDirector, mappedDirector } from "./data.js";
+import { alphabeticOrderAsc, alphabeticOrderDes, filteredDirector, mappedDirector, people, peopleGender } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -94,3 +94,9 @@ document.getElementById("directors").addEventListener("change", function(){
   }
   titleImage(directorFilter);
 });
+
+const characters = people(movies);
+console.log(characters);
+
+const characterGender = peopleGender(characters);
+console.log(characterGender);
