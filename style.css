@@ -153,3 +153,9 @@ html {
         padding-top:3px;
         padding-bottom:10px;
       }
+
+      @media (max-width: 600px) {
+        #order, #directors {
+          width: 100px;
+        }
+      }

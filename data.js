@@ -11,7 +11,7 @@ export const alphabeticOrderDes = function (anyArray) {
 
 export const mappedDirector = function(anyArray) {
   const director = anyArray.map(anyArray => anyArray.director)
-  return director
+  return director;
 }
 
 export const filteredDirector = function(anyArray) {
