@@ -1,165 +1,160 @@
-
-
 html {
-  font-family: sans-serif;;
-    color: white;
-    }
-  
-  body{
-    position: relative;
-    margin:0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: url(blanquito.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-  }
-  
-  header{
-    background-color: #80d0ce;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-  }
-
-    h1{
-      font-family: 'Ghibli';
-      font-size: 30px;
-      font-weight: 50;
-      text-align: center;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -100%);
-    }
-    img{
-      width: 200px;
-      flex-wrap: wrap;
-    }
-
-  main{
-    display: flex;
-    justify-content: center;
-  }
-
-    .order{
-      position: absolute;
-      display: flex;
-      flex-direction: row;
-    }
-
-    #order{
-      background-color: #ffffff;
-      color: #5bcfcc;
-      border-radius:25px;
-      text-align: center;
-      margin-left: 20px;
-      height: 35px;
-      width: 200px;
-      border: 0px;
-      font-size: 15px;
-      padding-right: 10px;
-      flex-wrap: nowrap;
-      flex-wrap: wrap;
-
-    }
-
-    #directors{
-      background-color: #ffffff;
-      color: #5bcfcc;
-      border-radius:25px;
-      text-align: center;
-      margin-left: 20px;
-      height: 35px;
-      width: 200px;
-      border: 0px;
-      font-size: 15px;
-      padding-right: 10px;
-      flex-wrap: nowrap;
-      flex-wrap: wrap;
-
-    }
-
-    .barra{
-      background-color: #f9ccc8;
-      background-size: cover;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      box-sizing: border-box;
-      text-align: center;
-      align-items: center;
-      height: 70px;
-    }
-
-    #root{
-        position: static;
-        align-items: top;
-        min-height: 40px;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 1200px;
-        margin-top: 6em;
-        margin-bottom: 30px;
-    }
-
-
-    .card{
-        align-items: top;
-        text-align: center;
-        font-size: 10px;
-        flex-wrap: nowrap;
-        margin: 2em 2em 4em 2em;
-        width: min-content;
-        width: 250px;
-       background: #80d0ce ;
-       border-radius: 25px 0 0 0;
-       box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
-       padding-bottom: 40px;
+  font-family: sans-serif;
+  color: white;
 }
 
+body {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(blanquito.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-      .card img {
-        margin-top: -3em;
-        align-items: top;
-        width: 200px;
-        height: 280px;
-        object-fit: cover;
-        border-radius: 25px 0 0 0;
-        flex-wrap: nowrap;
-        justify-content: center;
-        transition: all 0.8 ease;
-        box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
-      }
-      .card img:hover{
-        filter:grayscale(1) brightness(1);
-        transition:all 0.6% ease;
-      }
+header {
+  background-color: #80d0ce;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+}
 
-      h2{
-        font-weight: 550;
-        transform: translate(0px,305px);
-        flex-wrap: nowrap;
-        justify-content: center;
-        padding-top:3px;
-        padding-bottom:10px;
-      }
+h1 {
+  font-family: "Ghibli";
+  font-size: 30px;
+  font-weight: 50;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+img {
+  width: 200px;
+  flex-wrap: wrap;
+}
 
-      @media (max-width: 600px) {
-        #order, #directors, img {
-          width: 100px;
-        }
-        header{
-          height: 100px;
-        }
-      }
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.order {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+
+#order {
+  background-color: #ffffff;
+  color: #5bcfcc;
+  border-radius: 25px;
+  text-align: center;
+  margin-left: 20px;
+  height: 35px;
+  width: 200px;
+  border: 0px;
+  font-size: 15px;
+  padding-right: 10px;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+#directors {
+  background-color: #ffffff;
+  color: #5bcfcc;
+  border-radius: 25px;
+  text-align: center;
+  margin-left: 20px;
+  height: 35px;
+  width: 200px;
+  border: 0px;
+  font-size: 15px;
+  padding-right: 10px;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+.barra {
+  background-color: #f9ccc8;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  height: 70px;
+}
+
+#root {
+  position: static;
+  align-items: top;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-top: 6em;
+  margin-bottom: 30px;
+}
+
+.card {
+  align-items: top;
+  text-align: center;
+  font-size: 10px;
+  flex-wrap: nowrap;
+  margin: 2em 2em 4em 2em;
+  width: min-content;
+  width: 250px;
+  background: #80d0ce;
+  border-radius: 25px 0 0 0;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  padding-bottom: 40px;
+}
+.card img {
+  margin-top: -3em;
+  align-items: top;
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 25px 0 0 0;
+  flex-wrap: nowrap;
+  justify-content: center;
+  transition: all 0.8 ease;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+}
+.card img:hover {
+  filter: grayscale(1) brightness(1);
+  transition: all 0.6% ease;
+}
+
+h2 {
+  font-weight: 550;
+  transform: translate(0px, 305px);
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  #order,
+  #directors,
+  img {
+    width: 100px;
+  }
+  header {
+    height: 100px;
+  }
+}
