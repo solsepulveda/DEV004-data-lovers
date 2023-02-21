@@ -42,9 +42,7 @@ html {
     }
     img{
       width: 200px;
-      box-sizing: border-box;
-        flex-wrap: nowrap;
-      justify-content: center;
+      flex-wrap: wrap;
     }
 
   main{
@@ -158,7 +156,10 @@ html {
       }
 
       @media (max-width: 600px) {
-        #order, #directors {
+        #order, #directors, img {
           width: 100px;
+        }
+        header{
+          height: 100px;
         }
       }
