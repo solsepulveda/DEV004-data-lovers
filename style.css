@@ -16,8 +16,7 @@ body {
 }
 
 header {
-  background-color: #80d0ce;
-  background-repeat: no-repeat;
+  background-color: rgba(128, 208, 207, 0.768);
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -25,6 +24,7 @@ header {
   box-sizing: border-box;
   text-align: center;
   align-items: center;
+  height: 150px;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -100%);
 }
-img {
+#logo {
   width: 200px;
   flex-wrap: wrap;
 }
@@ -117,41 +117,100 @@ main {
   margin: 2em 2em 4em 2em;
   width: min-content;
   width: 250px;
-  background: #80d0ce;
-  border-radius: 25px 0 0 0;
-  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
-  padding-bottom: 40px;
+  background: rgb(128, 208, 206, 0.5);
+  border-radius: 25px 5px 5px 5px;
+  /* box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2); */
+  height: 350px;
 }
 .card img {
-  margin-top: -3em;
+  margin-top: 2.5em;
   align-items: top;
   width: 200px;
   height: 280px;
   object-fit: cover;
-  border-radius: 25px 0 0 0;
+  border-radius: 25px 5px 5px 5px;
   flex-wrap: nowrap;
   justify-content: center;
   transition: all 0.8 ease;
   box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+
 }
+
+.card img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9a3a3; /* color rosa */
+  opacity: 0.7; /* opacidad del 70% */
+  z-index: 1;
+  border-radius: 25px 5px 5px 5px;
+}
+
 .card img:hover {
-  filter: grayscale(1) brightness(1);
+  filter: grayscale(1);
   transition: all 0.6% ease;
 }
 
 h2 {
   font-weight: 550;
-  transform: translate(0px, 305px);
+  transform: translate(0px, 0);
   flex-wrap: nowrap;
   justify-content: center;
   padding-top: 3px;
-  padding-bottom: 10px;
+  background-color: rgb(118, 209, 206, 1);
+  line-height: 30px;
+  border-radius: 5px 5px 5px 5px;
 }
+
+h3 {
+  font-weight: 550;
+  font-size: 15px;
+  transform: translate(0px, -250px);
+  flex-wrap: nowrap;
+  justify-content: center;
+  display: none;
+  text-overflow: 200px;
+}
+
+p{
+  font-weight: 550;
+  transform: translate(0px, -240px);
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-top: 3px;
+  font-size: 13px;
+  display:none;
+}
+p1{
+  font-weight: 550;
+  transform: translate(0px, -240px);
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-top: 3px;
+  display:none;
+}
+.card img:hover ~ h3 {
+  display: block;
+  transform: translate(0px, -250px);z
+}
+.card img:hover ~ p{
+  display: block;
+  transform: translate(0px, -250px);
+}
+.card img:hover ~ p1{
+  display: block;
+  transform: translate(0px, -250px);
+}
+
 
 @media (max-width: 600px) {
   #order,
   #directors,
-  img {
+  #logo {
     width: 100px;
   }
   header {
