@@ -20,3 +20,22 @@ export const filteredDirector = function(anyArray) {
   })
   return onlyDirectorName
 }
+
+export const calculate = function(movies) {
+  for (let i=0; i<movies.length; i++){
+    const movie = movies[i];
+    let femaleCount = 0;
+    let maleCount = 0;
+    for (let j=0; j<movie.people.length; j++) {
+      const person = movie.people[j];
+      if (person.gender === 'Female'){
+        femaleCount += 1;
+      }
+      else if (person.gender === 'Male'){
+        maleCount += 1;
+      }
+    }
+    console.log(femaleCount);
+    console.log(maleCount);
+  }
+}

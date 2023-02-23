@@ -13,9 +13,10 @@ const titleImage = (movies) => {
     const movieDiv = document.createElement("div");
     movieDiv.classList.add("card"); //clase para editar en css
     //con movie.title llamamos a la constante y le asignamos una etiqueta
-    movieDiv.innerHTML += `<h2>${movie.title}</h2>
-    <img src="${movie.poster}" alt="imágen de la película">`//siempre poner en imágenes alt
+    movieDiv.innerHTML += ` <img src="${movie.poster}" alt="imágen de la película"><h2>${movie.title}</h2><h3>Director:<br>${movie.director}</h3>
+    <p>Release Date:<br>${movie.release_date}</p><p1>Rate:<br> ${movie.rt_score}</p1>`//siempre poner en imágenes alt
     root.appendChild(movieDiv);
+
   }
 };
 titleImage(movies);
@@ -94,3 +95,22 @@ document.getElementById("directors").addEventListener("change", function(){
   }
   titleImage(directorFilter);
 });
+
+export const calculate = function(movies) {
+  for (let i=0; i<movies.length; i++){
+    const movie = movies[i];
+    let femaleCount = 0;
+    let maleCount = 0;
+    for (let j=0; j<movie.people.length; j++) {
+      const person = movie.people[j];
+      if (person.gender === 'Female'){
+        femaleCount += 1;
+      }
+      else if (person.gender === 'Male'){
+        maleCount += 1;
+      }
+    }
+    console.log(femaleCount);
+    console.log(maleCount);
+  }
+}
