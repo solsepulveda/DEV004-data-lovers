@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  background-color: rgba(128, 208, 207, 0.768);
+  background-color: rgb(128, 208, 207);
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -24,12 +24,13 @@ header {
   box-sizing: border-box;
   text-align: center;
   align-items: center;
-  height: 150px;
+  height: 200px;
+  background-image: url(nubes.png);
 }
 
 h1 {
   font-family: "Ghibli";
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 50;
   text-align: center;
   margin: 0;
@@ -37,10 +38,26 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.567), 2px 2px 2em rgb(78, 180, 193);
+
 }
 #logo {
-  width: 200px;
+  width: 300px;
   flex-wrap: wrap;
+}
+#kodama{
+  width: 100px;
+  position: absolute;
+  transform: translate(300px, -70px);
+  opacity: 0.8;
+  flex-wrap: wrap;
+}
+#kodama1{
+  width: 100px;
+  position: absolute;
+  opacity: 0.7;
+  flex-wrap: wrap;
+  transform: scaleX(-1) translate(400px, 0px);
 }
 
 main {
@@ -94,6 +111,7 @@ main {
   text-align: center;
   align-items: center;
   height: 70px;
+  /* box-shadow:2px 2px 8px 4px rgba(0, 0, 0, 0.2); */
 }
 
 #root {
@@ -135,20 +153,12 @@ main {
   box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
 
 }
-
-.card img::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f9a3a3; /* color rosa */
-  opacity: 0.7; /* opacidad del 70% */
-  z-index: 1;
-  border-radius: 25px 5px 5px 5px;
-}
+/* #rectangle{
+  width: 200px;
+  height: 100px;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+} */
 
 .card img:hover {
   filter: grayscale(1);
@@ -174,6 +184,9 @@ h3 {
   justify-content: center;
   display: none;
   text-overflow: 200px;
+  background-color: rgb(118, 209, 206, 1);
+  line-height: 30px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 p{
@@ -184,6 +197,7 @@ p{
   padding-top: 3px;
   font-size: 13px;
   display:none;
+  color: #5bcfcc;
 }
 p1{
   font-weight: 550;
@@ -192,18 +206,47 @@ p1{
   justify-content: center;
   padding-top: 3px;
   display:none;
+  color: #5bcfcc;
+  font-size: 13px;
+}
+p2{
+  transform: translate(0px, -240px);
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-top: 3px;
+  display:none;
+  color: #000000;
+}
+#cuadro{
+  background-color:#ffffff;
+  width: 380px;
+  height: 300px;
+  display: none;
+  position: absolute;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.card img:hover ~ #cuadro {
+  display: block;
+  transform: translate(-67px, -360px);
 }
 .card img:hover ~ h3 {
   display: block;
-  transform: translate(0px, -250px);z
+  transform: translate(0px, -350px);z
 }
 .card img:hover ~ p{
   display: block;
-  transform: translate(0px, -250px);
+  transform: translate(-50px, -330px);
 }
 .card img:hover ~ p1{
   display: block;
-  transform: translate(0px, -250px);
+  transform: translate(50px, -375px);
+}
+.card img:hover ~ p2{
+  display: block;
+  transform: translate(-42px, -350px);
+  width: 330px;
+  text-align: justify;
 }
 
 
@@ -215,5 +258,12 @@ p1{
   }
   header {
     height: 100px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  #kodama{
+    width: 50px;
+    transform: translate(150px,0);
   }
 }
