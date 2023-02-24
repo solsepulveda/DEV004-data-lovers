@@ -1,4 +1,7 @@
 # Studio Ghibli - Data Lovers
+
+ ![image](https://user-images.githubusercontent.com/122575839/221294078-229b0756-1b6f-4557-bf92-23e3c0cefab6.png)
+
 ## Índice
 
 * [1. Introducción](#1-Introducción)
@@ -19,13 +22,13 @@ Studio Ghibli  es un estudio de animación japonés, fue fundada en 1985 por Hay
 
 Dirigido a los fans y personas que disfrutan de la películas de Studio Ghibli, son personas muy curiosas que quieren saber todo sobre lo que les gusta, usualmente fanáticos de animé y/o que aprecian el arte gráfico. Son personas que le dan gran valor a la naturaleza y es por eso que conectan de manera fácil con las películas de ghibli ya que siempre suele tener temática medioambiental y/o social.
 
-#Edad: transversal, pero prima entre la generación de los Millennials
+### Edad: transversal, pero prima entre la generación de los Millennials
 
-#¿Cuándo lo utilizan?
+#### ¿Cuándo lo utilizan?
 
  Cuando quieren saber sobre una película, ad portas de verla o después de verla, con la curiosidad de querer saber más sobre lo que han visto.
 
-#Datos relevantes que quieren ver en la interfaz
+#### Datos relevantes que quieren ver en la interfaz
 
 * Quieren tener la certeza de quiénes son los directores  de sus películas favoritas de Ghibli.
 * Quieren visualizar las portadas ya que una de las cosas características de Ghibli es el arte en sus producciones.
