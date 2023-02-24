@@ -99,4 +99,5 @@ document.getElementById("directors").addEventListener("change", function(){
   titleImage(directorFilter);
 });
 
-calculate(movies); 
+calculate(movies);
+
