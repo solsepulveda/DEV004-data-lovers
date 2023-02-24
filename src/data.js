@@ -23,18 +23,23 @@ export const filteredDirector = function(anyArray) {
   return onlyDirectorName
 }
 
-export const people = function(anyArray) {
-  const charactersMovies = anyArray.map(anyArray => anyArray.people) 
-  return charactersMovies
-}
-
-export const peopleGender = function(anyArray) {
-  const characterGender = anyArray.filter(character => {
-    const gender = character.gender
-    const female = [];
-    if(gender === 'Female'){
-      female.push(gender);
-      return female.length
-    }});
-  return characterGender
+export const calculate = function(movies) {  
+  for (let i=0; i<movies.length; i++){
+    const movie = movies[i];
+    let femaleCount = 0;
+    let maleCount = 0;
+    const movieGender = [];
+    for (let j=0; j<movie.people.length; j++) {
+      const person = movie.people[j];
+      if (person.gender === 'Female'){
+        femaleCount += 1;
+      }
+      else if (person.gender === 'Male'){
+        maleCount += 1;
+      }
+    }
+    movieGender.push(femaleCount);
+    movieGender.push(maleCount);
+    console.log(movieGender);        
+  }
 }
