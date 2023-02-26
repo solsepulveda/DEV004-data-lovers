@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width"/>
   <link rel="icon" href="favicon.ico"/>
   <title>Data Lovers</title>
-  <!-- <script src="https://kit.fontawesome.com/f84775eb32.js" crossorigin="anonymous"></script> -->
+  <script src="https://kit.fontawesome.com/f84775eb32.js" crossorigin="anonymous"></script>
   <link href="https://fonts.cdnfonts.com/css/ghibli" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,22 +20,33 @@
     <h1>Studio Ghibli Data Movies</h1>
   </header>
 
-  <main class="barra">
-    <div class="order">      
-      <select name="order" id="order">
-        <option value="0" disabled selected>Order by</option>
-        <option value="a-z">A-Z</option>
-        <option value="z-a">Z-A</option>
-      </select>
-      <select name="filter by director" id="directors">
-        <option value="0" disabled selected>Order by director</option>
-        <option value="all">All</option>
-      </select>      
+  <main>
+    <div class="barra">
+      <div class="order">      
+        <select name="order" id="order">
+          <option value="0" disabled selected>Order by</option>
+          <option value="default">Default</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+        <select name="filter by director" id="directors">
+          <option value="0" disabled selected>Filter by director</option>
+          <option value="all">All</option>
+        </select>      
+      </div>
+      <div id="root"></div>
+      <button href=""> Back to top</button>
     </div>
-    <div id="root"></div>
   </main>
 
   <footer>
+    <div class="rrss">
+      <a href="https://twitter.com/GhibliUSA" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+      <img src="logo.png">
+    </div>
+    <div class="creators">
+      <p>Creator by SolSepulveda & BarbVilla</p>
+    </div>
 
   </footer>
 
