@@ -1,5 +1,7 @@
 
-import { alphabeticOrderAsc, alphabeticOrderDes, filteredDirector, mappedDirector } from "./data.js";
+
+import { alphabeticOrderAsc, alphabeticOrderDes, filteredDirector, mappedDirector, calculate } from "./data.js";
+
 import data from "./data/ghibli/ghibli.js";
 
 const movies = data.films;
@@ -21,7 +23,9 @@ const titleImage = (movies) => {
 };
 titleImage(movies);
 
-const copyMovies = data.films;
+
+const copyMovies = structuredClone(movies);
+
 const orderBy = (copyMovies) => {
   const buttonSelection = document.getElementById("order")
   buttonSelection.addEventListener("change", () => {
@@ -31,13 +35,19 @@ const orderBy = (copyMovies) => {
       const orderAZ = alphabeticOrderAsc(copyMovies);    
       titleImage(orderAZ);
     }
-    if (selectedOption === "z-a"){
+    else if (selectedOption === "z-a"){
       root.innerHTML = "";
       const orderZA = alphabeticOrderDes(copyMovies);
       titleImage(orderZA);
     }
-  });  
-};
+
+    else if (selectedOption === "default"){
+      root.innerHTML = "";
+      titleImage(movies);      
+    }
+  });
+}
+
 orderBy(copyMovies);
 
 const director = mappedDirector(movies);
@@ -95,4 +105,7 @@ document.getElementById("directors").addEventListener("change", function(){
   }
   titleImage(directorFilter);
 });
+
+calculate(movies);
+
 

@@ -260,3 +260,35 @@ p2{
     transform: translate(150px,0);
   }
 }
+footer{
+  background-color: #f9ccc8;
+  background-size: cover;
+  position: fixed;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1%;
+  font-size: 30px;
+}
+
+  .rrss { 
+  display: flex;
+  flex-direction: row;
+  }
+
+    a{
+      color: white;
+      text-align: left;
+    }
+   
+
+  .creartors {  
+  display: block;
+  font-family: 'Ghibli';
+  align-content: top;
+}
+  p{
+    font-size: 20px;
+  }
