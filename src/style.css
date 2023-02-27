@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  min-height: 100%;
 }
 
 header {
@@ -153,11 +154,11 @@ main {
 
 }
 
-/* .card img:hover {
+.card img:hover {
   filter: grayscale(1);
   transition: all 0.6% ease;
-} */
 
+}
 h2 {
   font-weight: 550;
   transform: translate(0px, 0);
@@ -225,7 +226,7 @@ p2{
 }
 .card img:hover ~ h3 {
   display: block;
-  transform: translate(0px, -350px);z
+  transform: translate(0px, -350px);
 }
 .card img:hover ~ p{
   display: block;
@@ -259,4 +260,19 @@ p2{
     width: 50px;
     transform: translate(150px,0);
   }
+}
+footer {
+  background-color: #f9ccc8;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transform: translate(0,135em);
+}
+
+
+a{
+  color: white;
+  text-align: left;
 }
