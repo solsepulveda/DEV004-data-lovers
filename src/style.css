@@ -44,6 +44,8 @@ header {
   #logo {
     width: 300px;
     flex-wrap: wrap;
+    filter: drop-shadow(5px 5px 5px #353535);
+
   }
   #kodama{
     width: 100px;
@@ -51,6 +53,7 @@ header {
     transform: translate(300px, -70px);
     opacity: 0.8;
     flex-wrap: wrap;
+    filter: drop-shadow(5px 5px 5px #353535);
   }
   #kodama1{
     width: 100px;
@@ -58,6 +61,7 @@ header {
     opacity: 0.7;
     flex-wrap: wrap;
     transform: scaleX(-1) translate(400px, 0px);
+    filter: drop-shadow(5px 5px 5px #353535);
   }
 
 main {
@@ -111,7 +115,6 @@ main {
     text-align: center;
     align-items: center;
     height: 70px;
-    /* box-shadow:2px 2px 8px 4px rgba(0, 0, 0, 0.2); */
   }
 
   #root {
@@ -127,6 +130,7 @@ main {
     margin-bottom: 30px;
   }
 
+
   .card {
     align-items: top;
     text-align: center;
@@ -137,7 +141,6 @@ main {
     width: 250px;
     background: rgb(128, 208, 206, 0.5);
     border-radius: 25px 5px 5px 5px;
-    /* box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2); */
     height: 350px;
   }
 
@@ -156,9 +159,8 @@ main {
 
   .card img:hover {
     filter: grayscale(1);
-    transition: all 0.6% ease;
   }
-
+/* título */
   h2 {
     font-weight: 550;
     transform: translate(0px, 0);
@@ -169,96 +171,61 @@ main {
     line-height: 30px;
     border-radius: 5px 5px 5px 5px;
   }
-
+/* director */
   h3 {
     font-weight: 550;
     font-size: 15px;
-    transform: translate(0px, -250px);
     flex-wrap: nowrap;
     justify-content: center;
-    text-overflow: 200px;
     background-color: rgb(118, 209, 206, 1);
     line-height: 30px;
     border-radius: 5px 5px 5px 5px;
+    color: white;
   }
-
+/* release day*/
   p{
     font-weight: 550;
-    transform: translate(0px, -240px);
+    transform: translate(0px, 0px);
     flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: center;
     padding-top: 3px;
     font-size: 13px;
-    color: #5bcfcc;
+    color:#5bcfcc;
+    font-size:15px ;
   }
-
+/* rate */
   p1{
     font-weight: 550;
-    transform: translate(0px, -240px);
+    transform: translate(0px, -20px);
     flex-wrap: nowrap;
     justify-content: center;
     padding-top: 3px;
     color: #5bcfcc;
-    font-size: 13px;
+    font-size: 20px;
   }
-
-  p2{
-    transform: translate(0px, -240px);
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding-top: 3px;
+/* description */
+p2{
+  font-size: 13px;
+  justify-content: center;
+}
+/* gender */
+  h4{
+    font-size: 13px;
     color: #000000;
   }
 
-  #cuadro{
-    background-color:#ffffff;
-    width: 380px;
-    height: 300px;
-    display: none;
-    position: absolute;
-    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  .close{
+    justify-content: center;
+    background-color: #5bcfcc;
   }
-  .card img:hover ~ #cuadro {
-    display: block;
-    transform: translate(-67px, -360px);
-  }
-  .card img:hover ~ h3 {
-    display: block;
-    transform: translate(0px, -350px);
-  }
-  .card img:hover ~ p{
-    display: block;
-    transform: translate(-50px, -330px);
-  }
-  .card img:hover ~ p1{
-    display: block;
-    transform: translate(50px, -375px);
-  }
-  .card img:hover ~ p2{
-    display: block;
-    transform: translate(-42px, -350px);
-    width: 330px;
-    text-align: justify;
+  a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: white;
   }
 
-  @media (max-width: 600px) {
-    #order,
-    #directors,
-    #logo {
-      width: 100px;
-    }
-    header {
-      height: 100px;
-    }
-    h1 {
-      font-size: 20px;
-    }
-    #kodama{
-      width: 50px;
-      transform: translate(150px,0);
-    }
-  }
 
 footer {
   background-color: #F9CCC8;
@@ -278,14 +245,46 @@ footer {
     background-color:#ffffff;
     border-radius: 10px;
     width: 500px;
-    height: 500px;
-    /* border: 0;
-    box-shadow: 0 0 1em rgb(0 0 0 / .3); */
-  /*   & > * {
-      margin: 0 0 0.5rem 0;
-    } */
+    height: 400px;
+    padding: 10px;
+
   }
   .modal::backdrop {
     background: rgb(0 0 0 / 0.4);
   }
-  
+
+  p4{
+    font-weight: 550;
+    transform: translate(0px, 100px);
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 13px;
+    color:#5bcfcc;
+    font-size:15px;
+    padding: 100px;
+  }
+
+  @media (max-width: 600px) {
+    #order,
+    #directors,
+    #logo {
+      width: 100px;
+    }
+    header {
+      height: 100px;
+    }
+    h1 {
+      font-size: 20px;
+      margin-top: 60px;
+    }
+    footer{
+      position: absolute;
+      transform: translate(0,530em);
+    }
+    #kodama{
+      width: 50px;
+      transform: translate(150px,0);
+    }
+
+  }

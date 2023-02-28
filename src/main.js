@@ -19,11 +19,11 @@ const titleImage = (movies) => {
       <dialog class="modal" id="modal-${movie.id}">
         <div id="cuadro"></div>
         <h3>Director: ${movie.director}</h3>
-        <p>Release Date:<br>${movie.release_date}</p>
-        <p1>Rate:<br>${movie.rt_score}</p1>
+        <p>Release Date:  ${movie.release_date}</p>
+        <p>Rate:  ${movie.rt_score}</p>
         <p2>${movie.description}</p2>
         <div id="charactersgender"></div>
-        <button class="close">close</button>
+        <button class="close"><a href="index.html">volver</a></button>
       </dialog>
     `;
     root.appendChild(movieDiv);
@@ -32,10 +32,30 @@ const titleImage = (movies) => {
     movieDiv.addEventListener("click", () => {
       modal.showModal();
     });
-    const closeModal = modal.querySelector(".close");
-    closeModal.addEventListener("click", () => {
-      modal.close();
-    });
+    const movieGender = movieDiv.querySelector("#charactersgender");
+    const titles = mappedTitle(movies);
+    const moviesGender = calculate(movies);
+    const moviesTitleGender = [];
+    for (let i = 0; i < movies.length; i++){    
+      moviesTitleGender.push({
+        name: titles[i],
+        female: moviesGender[i][0],
+        male: moviesGender[i][1]
+      })      
+    }
+    const showGender = () => {
+      for (let i = 0; i < moviesTitleGender.length; i++){
+        const movieName = movieDiv.querySelector("h2").textContent;
+        if ( movieName === moviesTitleGender[i].name){
+          const femaleGender = moviesTitleGender[i].female;
+          const maleGender = moviesTitleGender[i].male;
+          const genders = document.createElement('h4');
+          genders.textContent = `Female: ${femaleGender} Male: ${maleGender}`;
+          movieGender.appendChild(genders);            
+        }        
+      }
+    }
+    showGender(movies);
   }
 };
 titleImage(movies);
@@ -123,12 +143,12 @@ document.getElementById("directors").addEventListener("change", function(){
 const titles = mappedTitle(movies);
 const moviesGender = calculate(movies);
 const moviesTitleGender = [];
-for (let i = 0; i < movies.length; i++){    
+for (let i = 0; i < movies.length; i++){
   moviesTitleGender.push({
     name: titles[i],
     female: moviesGender[i][0],
     male: moviesGender[i][1]
-  })      
+  })
 }
 console.log(moviesTitleGender);
 
