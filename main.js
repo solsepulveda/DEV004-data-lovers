@@ -23,7 +23,9 @@ const titleImage = (movies) => {
         <p>Rate:  ${movie.rt_score}</p>
         <p2>${movie.description}</p2>
         <div id="charactersgender"></div>
-        <button class="close"><a href="index.html">volver</a></button>
+        <form method="dialog">
+          <button class="close">Close</button>
+        </form>
       </dialog>
     `;
     root.appendChild(movieDiv);
@@ -150,7 +152,6 @@ for (let i = 0; i < movies.length; i++){
     male: moviesGender[i][1]
   })
 }
-console.log(moviesTitleGender);
 
 const elementGender = document.getElementById("charactersgender");
 for (let i = 0; i < moviesTitleGender.length; i++){
