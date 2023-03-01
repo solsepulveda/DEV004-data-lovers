@@ -298,8 +298,6 @@ footer {
   }
   /* ipad */
   @media (min-width: 820px) {
-    #order,
-    #directors{}
 
     #logo {
       width: 150px;
