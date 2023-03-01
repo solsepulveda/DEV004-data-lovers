@@ -36,12 +36,12 @@ const titleImage = (movies) => {
     const titles = mappedTitle(movies);
     const moviesGender = calculate(movies);
     const moviesTitleGender = [];
-    for (let i = 0; i < movies.length; i++){    
+    for (let i = 0; i < movies.length; i++){
       moviesTitleGender.push({
         name: titles[i],
         female: moviesGender[i][0],
         male: moviesGender[i][1]
-      })      
+      })
     }
     const showGender = () => {
       for (let i = 0; i < moviesTitleGender.length; i++){
